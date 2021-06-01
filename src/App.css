@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+    --background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+/*
+    - White (main heading, stats): hsl(0, 0%, 100%)
+    - Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+    - Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+*/
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+    margin: 0;
+    padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body{
+    background: var(--background);
+    padding: 100px 0;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
 }
-
-.App-link {
-  color: #61dafb;
+.card{
+    width: 85%;
+    background: var(--card-background);
+    height: 80%;
+    margin: auto;
+    text-align: center;
+    border-radius: 8px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image{
+    background: var(--accent);
+    border-radius: 8px 8px 0 0;
+    opacity: 1;
+}
+.image img{
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    opacity: .5;
+    display: block;
+}
+.text{
+    padding: 40px 25px;
+}
+.text h1{
+    font-size: 1.7em;
+}
+.text p{
+    opacity: .5;
+    line-height: 1.7em;
+    font-size: .95em;
+}
+.text span{
+    color: var(--accent);
+}
+.info{
+}
+h2{
+    padding: 15px 0;
+}
+h3{
+    opacity: .5;
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+@media screen and (min-width:640px){
+    .card{
+        width: 50%;
+    }
+    .infos{
+        display: flex;
+        flex-direction:row;
+        justify-content:space-around;
+    }
+    .info{
+        display: inline-block;
+    }
+}
+@media screen and (min-width:740px){
+    body{
+        padding: 100px 0;
+    }
+    .card{
+        width: 70%;
+        display: flex;
+        flex-direction: row-reverse;
+        text-align:start;
+    }
+    .text{
+        width: 100%;
+        padding: 50px;
+        padding-right: 80px;
+    }
+    .text p{
+        font-size: .8em;
+        padding-bottom: 10px;
+    }
+    .image{
+        width: 140%;
+        border-radius: 0 8px 8px 0;
+    }
+    img{
+        height: 100%;
+    }
+    .infos{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        padding-right: 25px;
+    }
+    .info{
+        display: inline-block;
+        padding-right:10px;
+    }
+    h2{
+        padding: 3px 0;
+        font-size: 1.2em;
+    }
+    h3{
+        font-size: .6em;
+    }
 }
